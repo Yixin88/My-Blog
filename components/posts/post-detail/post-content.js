@@ -2,6 +2,8 @@ import React from "react";
 import PostHeader from "./post-header";
 import ReactMarkdown from "react-markdown";
 import Image from "next/image";
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import { atomDark } from "react-syntax-highlighter/dist/cjs/styles/prism"; // code theme
 
 import styles from "./post-content.module.css";
 
@@ -42,6 +44,14 @@ export default function PostContent(props) {
 
       return (
         <p>{paragraph.children}</p> // if theres no image wrapped in p tag, then its a normal p tag element
+      )
+    },
+
+    code(code) {
+      const { className, children } = code;
+      const language = className.split('-')[1]; // className is something like language-js => We need the "js" part here
+      return (
+        <SyntaxHighlighter style={atomDark} language={language} children={children}></SyntaxHighlighter>
       )
     }
   };
