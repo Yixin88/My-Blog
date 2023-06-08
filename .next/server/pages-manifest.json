@@ -1,11 +1,7 @@
 {
-  "/_document": "pages/_document.js",
-  "/contact": "pages/contact.html",
   "/_app": "pages/_app.js",
-  "/api/contact": "pages/api/contact.js",
   "/_error": "pages/_error.js",
-  "/": "pages/index.js",
-  "/posts/[slug]": "pages/posts/[slug].js",
-  "/posts": "pages/posts.js",
-  "/404": "pages/404.html"
+  "/_document": "pages/_document.js",
+  "/contact": "pages/contact.js",
+  "/api/contact": "pages/api/contact.js"
 }
